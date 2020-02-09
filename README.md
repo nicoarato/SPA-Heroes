@@ -8,3 +8,8 @@ Encontrarás un link a los id de los héroes y un buscador para que puedas elegi
 
 App that uses an external API (https://superheroapi.com/) to show heroes and their characteristics.
 You will find a link to the id of the heroes and a search engine so you can choose your favorite hero.
+
+
+---
+Start the project:
+npm start
