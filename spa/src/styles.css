@@ -69,3 +69,7 @@ body {
 .footer p {
     margin-top: 10px;
 }
+
+.more-heroes {
+    text-align: right;
+}
