@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-
+import { HttpClientModule } from '@angular/common/http';
 //Routes
 import { APP_ROUTING } from './app.routes';
 
@@ -9,6 +10,7 @@ import { APP_ROUTING } from './app.routes';
 //Services
 
 import { HeroesService } from '../services/heroes.service';
+import { PeticionesService } from '../services/peticiones.service';
 
 
 //componentes
@@ -18,6 +20,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { SearchComponent } from './components/search/search.component';
+import { ExternoComponent } from './components/externo/externo.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +31,20 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    SearchComponent,
+    ExternoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    FormsModule,
+    APP_ROUTING,
+    HttpClientModule
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    PeticionesService
   ],
   bootstrap: [AppComponent]
 })
