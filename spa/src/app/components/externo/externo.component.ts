@@ -26,6 +26,7 @@ export class ExternoComponent implements OnInit {
   }
 
   cargaHeroe(){
+    this.heroe = false;
     this._peticionesService.getUser(this.heroeId).subscribe(
       result => {
         console.log(result);
