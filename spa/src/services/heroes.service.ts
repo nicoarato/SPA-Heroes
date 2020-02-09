@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class HeroesService {
 
+
     private heroes: Heroe[] = [
         {
           nombre: "Aquaman",
@@ -53,6 +54,7 @@ export class HeroesService {
           aparicion: "1974-11-01",
           casa: "Marvel"
         }
+        
       ];
 
     constructor() {
@@ -64,12 +66,28 @@ export class HeroesService {
        return this.heroes;
      }
 
-     getHeroe( idx: string ){
+     getHeroe( idx: string ) {
        return this.heroes[idx];
+     }
+
+     buscarHeroes(termino: string) {
+
+      let heroesArr: Heroe[] = [];
+      termino = termino.toLowerCase();
+
+      for( let heroe of this.heroes ) {
+
+        let nombre = heroe.nombre.toLowerCase();
+        if( nombre.indexOf(termino) >= 0 ) {
+          heroesArr.push(heroe);
+        }
+      }
+      return heroesArr;
+
      }
 }
 
-export interface Heroe{
+export interface Heroe {
   nombre: string;
   bio: string;
   img: string;
