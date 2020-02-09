@@ -1,0 +1,9 @@
+{
+
+    "/api/10221652665845238/": {
+        "target": "https://superheroapi.com",
+        "secure": false,
+        "changeOrigin": true
+
+    }
+}
